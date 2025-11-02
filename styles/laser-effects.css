@@ -1,0 +1,108 @@
+/* Reusable laser glow classes */
+.laser-glow {
+    position: relative;
+    overflow: visible;
+}
+
+/* Base styles for the laser effect */
+.laser-glow::before,
+.laser-glow::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    opacity: 0;
+}
+
+/* Horizontal laser (default) */
+.laser-glow.horizontal::before,
+.laser-glow.horizontal::after {
+    left: 0;
+    width: 100%;
+    height: 0.35vw;
+    bottom: 0;
+    transform: scaleX(0);
+}
+
+/* Vertical laser option */
+.laser-glow.vertical::before,
+.laser-glow.vertical::after {
+    top: 0;
+    height: 100%;
+    width: 0.35vw;
+    left: 0;
+    transform: scaleY(0);
+}
+
+/* Direction modifiers */
+.laser-glow.from-right::before,
+.laser-glow.from-right::after { transform-origin: right; }
+
+.laser-glow.from-left::before,
+.laser-glow.from-left::after { transform-origin: left; }
+
+.laser-glow.from-top::before,
+.laser-glow.from-top::after { transform-origin: top; }
+
+.laser-glow.from-bottom::before,
+.laser-glow.from-bottom::after { transform-origin: bottom; }
+
+/* Color variants */
+.laser-glow.red::before {
+    background: #ffffff;
+    z-index: 1;
+    box-shadow: 0 0 14px rgba(255,255,255,0.95), 0 0 28px rgba(255,255,255,0.7);
+}
+
+.laser-glow.red::after {
+    background: #d10125;
+    z-index: 2;
+    transition-delay: 0.18s;
+    box-shadow: 0 0 24px rgba(209,1,37,0.9), 0 0 48px rgba(209,1,37,0.6);
+}
+
+.laser-glow.blue::before {
+    background: #ffffff;
+    z-index: 1;
+    box-shadow: 0 0 14px rgba(255,255,255,0.95), 0 0 28px rgba(255,255,255,0.7);
+}
+
+.laser-glow.blue::after {
+    background: #0066ff;
+    z-index: 2;
+    transition-delay: 0.18s;
+    box-shadow: 0 0 24px rgba(0,102,255,0.9), 0 0 48px rgba(0,102,255,0.6);
+}
+
+/* Default hover states */
+.laser-glow:hover::before,
+.laser-glow:hover::after {
+    opacity: 1;
+}
+
+.laser-glow.horizontal:hover::before,
+.laser-glow.horizontal:hover::after {
+    transform: scaleX(1);
+}
+
+/* Vertical hover states */
+.laser-glow.vertical:hover::before,
+.laser-glow.vertical:hover::after {
+    transform: scaleY(1);
+}
+
+/* Manual hover state class */
+.laser-glow.laser-glow-hover::before,
+.laser-glow.laser-glow-hover::after {
+    opacity: 1;
+}
+
+.laser-glow.horizontal.laser-glow-hover::before,
+.laser-glow.horizontal.laser-glow-hover::after {
+    transform: scaleX(1);
+}
+
+.laser-glow.vertical.laser-glow-hover::before,
+.laser-glow.vertical.laser-glow-hover::after {
+    transform: scaleY(1);
+}
