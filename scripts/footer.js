@@ -3,7 +3,7 @@ footer.innerHTML = `<div class="footer">
         <div class="invite">
                <h1>Welkom bij Ne<span class="logo-x">x</span>tDetail!</h1>
                <a>Maecenas ultricies ex at augue lacinia placerat. In sodales lectus ac dolor venenatis dignissim. Morbi eu facilisis magna, sit amet egestas enim. Nullam at pellentesque lorem. Pellentesque dignissim posuere dui, at bibendum est eleifend vel. Duis suscipit semper ullamcorper. Ut elit sem, eleifend et nibh id, tristique cursus tellus.</a>
-               <a>Wees de NEXT!</a>
+               <a>Wees de NE<span class="logo-x">X</span>T!</a>
         </div>
         <div class="info">
         <table>
@@ -16,7 +16,7 @@ footer.innerHTML = `<div class="footer">
                         <g id="SVGRepo_iconCarrier"> <g> <path d="M26,4.1V3c0-1.7-1.3-3-3-3H9C7.3,0,6,1.3,6,3v1.1C3.7,4.6,2,6.6,2,9v14c0,2.8,2.2,5,5,5h18c2.8,0,5-2.2,5-5V9 C30,6.6,28.3,4.6,26,4.1z M28,9v0.4l-2,1.2V6.2C27.2,6.6,28,7.7,28,9z M8,3c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1v8.9l-8,4.9l-8-4.9 V3z M6,6.2v4.5L4,9.4V9C4,7.7,4.8,6.6,6,6.2z"/> <path d="M11,6h7c0.6,0,1-0.4,1-1s-0.4-1-1-1h-7c-0.6,0-1,0.4-1,1S10.4,6,11,6z"/> <path d="M11,10h3c0.6,0,1-0.4,1-1s-0.4-1-1-1h-3c-0.6,0-1,0.4-1,1S10.4,10,11,10z"/> </g> </g>
                     </svg></td>
                  <td><a>Email</a></td>
-                 <td><a>: Info.nextdetail@gmail.com</a></td>
+                 <td><a>: Info.ne<span class="logo-x">x</span>tdetail@gmail.com</a></td>
                 </tr>
                 <tr>
                     <td>
@@ -49,7 +49,7 @@ footer.innerHTML = `<div class="footer">
                         </svg>
                     </td>
                     <td><a>Instagram</a></td>
-                    <td><a>: @nextdetail.nl</a></td>
+                    <td><a>: @ne<span class="logo-x">x</span>tdetail.nl</a></td>
                 </tr>
                 <tr>
                     <td>
@@ -60,7 +60,7 @@ footer.innerHTML = `<div class="footer">
                         </svg>
                     </td>
                     <td><a>Tiktok</a></td>
-                    <td><a>: @nextdetail.nl</a></td>
+                    <td><a>: @ne<span class="logo-x">x</span>tdetail.nl</a></td>
             </tr>
             </table>
     </div>

@@ -8,13 +8,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/laser-effects.css">
     <script defer src="scripts/header.js"></script>
     <script defer src="scripts/footer.js"></script>
-    <script defer src="/scripts/footer.js"></script>
+    <script defer src="scripts/slideshow.js"></script>
 </head>
 <body>
     <div id="header"></div>
+    <div class="slideshow">
+        <div class="mySlides">
+            <img src="/images/slide1.png">
+        </div>
+        <div class="mySlides">
+            <img src="/images/slide2.png">
+        </div>
+        <div class="mySlides">
+            <img src="/images/slide3.png">
+        </div>
+        <div class="mySlides">
+            <img src="/images/slide4.png">
+        </div>
+        <div class="mySlides">
+            <img src="/images/slide5.png">
+        </div>
+        <a class="next" onclick="plusDivs(-1)">&#10094;</a>
+        <a class="prev" onclick="plusDivs(1)">&#10095;</a>
+    <div class="slide-text">
+        <h1>Welkom bij Ne<span class="logo-x">x</span>tDetail</h2>
+        <a>Ne<span class="logo-x">x</span>tDetail staat voor kwaliteit, precisie en oog voor elk detail.
+            Wij zorgen dat jouw voertuig er weer als nieuw uitziet – van interieur tot exterieur.
+            Ne<span class="logo-x">x</span>tDetail.</a>
+            <a>Ne<span class="logo-x">x</span>t Level Shine.</a>
+    </div>
+    </div>
     <div id="footer"></div>
 </body>
 </html>
