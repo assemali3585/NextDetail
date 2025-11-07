@@ -5,10 +5,16 @@ body {
     margin: 0; /* remove browser default page margins so full-width elements reach the edges */
     padding: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh; /* ensure body takes at least full viewport height */
 }
 /* Prevent horizontal scrolling across the site */
 html, body {
     overflow-x: hidden;
+}
+
+/* Make main content grow to push footer to bottom */
+.slideshow, .prices-size {
+    flex: 1 0 auto;
 }
 
 .montserrat-Mont {
@@ -21,10 +27,10 @@ html, body {
 /* Slideshow styles */
 .slideshow {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: none;
     height: calc(100vh - 8vw);
-    margin: auto;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -42,7 +48,8 @@ html, body {
 .mySlides img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -79,7 +86,7 @@ html, body {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(209, 1, 37, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slide-text {

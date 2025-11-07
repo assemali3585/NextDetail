@@ -5,7 +5,7 @@ header.innerHTML = `<div class="header">
         <div class="menu">
                 <div>
                         <a href="index.html">Home</a>
-                        <a href="prijzen.html">Prijzen</a>
+                        <a href="prices.html">Prijzen</a>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
                 </div>
