@@ -51,37 +51,3 @@ setTimeout(() => {
     hideLaser();
 }, 0);
 
-// Laser fill effect logic
-setTimeout(() => {
-    const menu = document.querySelector('.menu div');
-    const header = document.querySelector('.header');
-    const laserBar = document.querySelector('.header-laser-bar');
-    const whiteLaser = document.querySelector('.header-laser-white');
-    const redLaser = document.querySelector('.header-laser-red');
-    function moveLaserTo(el) {
-        const menuRect = menu.getBoundingClientRect();
-        const elRect = el.getBoundingClientRect();
-        const left = elRect.left - menuRect.left;
-        const width = elRect.width;
-        redLaser.style.left = left + 'px';
-        redLaser.style.width = width + 'px';
-        redLaser.style.opacity = 1;
-    }
-    function hideLaser() {
-        redLaser.style.opacity = 0;
-    }
-    // Set white laser full width
-    function setWhiteLaser() {
-        whiteLaser.style.left = 0;
-        whiteLaser.style.width = menu.offsetWidth + 'px';
-    }
-    setWhiteLaser();
-    window.addEventListener('resize', setWhiteLaser);
-    menu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('mouseenter', () => moveLaserTo(a));
-        a.addEventListener('mouseleave', hideLaser);
-        a.addEventListener('focus', () => moveLaserTo(a));
-        a.addEventListener('blur', hideLaser);
-    });
-    hideLaser();
-}, 0);

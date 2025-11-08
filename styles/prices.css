@@ -34,11 +34,10 @@ html, body {
 .prices-size h1 {
     color: #fff;
     font-size: 2.5rem;
-    margin: 2rem;
-    padding: 3rem;
+    padding: 2rem;
 }
 
-.size {
+.window {
     color: #000;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -52,7 +51,12 @@ html, body {
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
-.size:hover {
+.window a {
+    color: #000;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.window:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;

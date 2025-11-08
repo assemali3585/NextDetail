@@ -15,6 +15,8 @@ const jsFiles = [
   "scripts/footer.js",
   "scripts/header.js",
   "scripts/slideshow.js",
+  "scripts/pakketten.js",
+  "scripts/prices.js"
 ];
 
 //lijst van fonts
