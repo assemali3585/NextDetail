@@ -7,7 +7,8 @@ const cssFiles = [
   "styles/header.css",
   "styles/index.css",
   "styles/laser-effects.css",
-  "styles/prices.css"
+  "styles/prices.css",
+  "styles/about.css"
 ];
 
 // lijst van js bestanden
@@ -16,7 +17,7 @@ const jsFiles = [
   "scripts/header.js",
   "scripts/slideshow.js",
   "scripts/pakketten.js",
-  "scripts/prices.js"
+  "scripts/prices.js",
 ];
 
 //lijst van fonts

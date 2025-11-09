@@ -6,7 +6,7 @@ header.innerHTML = `<div class="header">
                 <div>
                         <a href="index.html">Home</a>
                         <a href="prices.html">Prijzen</a>
-                        <a href="about.html">About</a>
+                        <a href="about.html">Over mij</a>
                         <a href="contact.html">Contact</a>
                 </div>
                 <div class="menu-laser-bar">

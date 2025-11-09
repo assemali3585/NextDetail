@@ -45,6 +45,16 @@
             pricesizeDiv.style.flexDirection = 'column';
             console.log('Flex direction set to column');
 
+            // Create a "Back" button
+            const backButton = document.createElement('button');
+            backButton.className='laser-glow horizontal red from-right back-button';
+            backButton.textContent = 'TERUG';
+            backButton.addEventListener('click', () => {
+                // Logic to go back to the previous view or reset the content
+                location.reload(); // Simple way to reset the page
+            });
+            pricesizeDiv.appendChild(backButton);
+
             // Create Interior section
             const interiorSection = document.createElement('div');
             interiorSection.className = 'package-section';
@@ -116,6 +126,17 @@
 
             // Set flex direction to column to stack sections vertically
             pricesizeDiv.style.flexDirection = 'column';
+
+            // Create a "Back" button
+            const backButton = document.createElement('button');
+            backButton.className='laser-glow horizontal red from-right back-button';
+            backButton.textContent = 'TERUG';
+            backButton.addEventListener('click', () => {
+                // Logic to go back to the previous view or reset the content
+                location.reload(); // Simple way to reset the page
+            });
+            pricesizeDiv.appendChild(backButton);
+
 
             // Create Interior section
             const interiorSection = document.createElement('div');
@@ -189,6 +210,16 @@
 
             // Set flex direction to column to stack sections vertically
             pricesizeDiv.style.flexDirection = 'column';
+
+            // Create a "Back" button
+            const backButton = document.createElement('button');
+            backButton.className='laser-glow horizontal red from-right back-button';
+            backButton.textContent = 'TERUG';
+            backButton.addEventListener('click', () => {
+                // Logic to go back to the previous view or reset the content
+                location.reload(); // Simple way to reset the page
+            });
+            pricesizeDiv.appendChild(backButton);
 
             // Create Interior section
             const interiorSection = document.createElement('div');
