@@ -11,6 +11,7 @@
     position: relative;
     clear: both;
     flex-shrink: 0;
+    font-family: 'Poppins', sans-serif!important;
 }
 
 .footer-inner {
@@ -32,12 +33,12 @@
     min-width: 0; /* allow children to shrink properly */
     box-sizing: border-box;
     overflow: hidden;
+    align-items: flex-start!important;
 }
 .contact {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-self: start;
 }
 .contact input {
     padding: 10px;
@@ -53,21 +54,14 @@
 .contact button {
     padding: 20px 40px;
     width: 50%;
-    background-color: transparent;
     color: #ffffff;
     max-height: fit-content;
     border: none;
-    position: relative;
     font-size: 1.1vw;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    align-self: start;
 }
 .contact button::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.4vw;
-    height: 0.4vw;
     background: #fff;
     box-shadow: 0 0 12px 2px #fff, 0 0 32px 4px #fff;
     border-radius: 0.2vw;

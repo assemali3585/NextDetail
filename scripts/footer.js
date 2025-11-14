@@ -70,7 +70,7 @@ footer.innerHTML = `<div class="footer">
                 <input type="text" placeholder="Email">
                 <input type="text" placeholder="Telefoon">
                 <input type="file" name="Foto's"  placeholder="Foto's">
-                <button class="laser-glow horizontal red from-right" type="submit">Verzenden</button>
+                <button class="laser-glow horizontal red from-right back-button" type="submit">Verzenden</button>
         </div>
     </div>
 </div>`;

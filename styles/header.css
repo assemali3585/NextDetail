@@ -102,5 +102,10 @@
 .menu a:hover {
     cursor: pointer;
     color: #d10125;
-    font-size: larger;
+    font-size: 1.2vw;
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.menu a.active {
+    color: #d10125 !important;
 }

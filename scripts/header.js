@@ -7,7 +7,6 @@ header.innerHTML = `<div class="header">
                         <a href="index.html">Home</a>
                         <a href="prices.html">Prijzen</a>
                         <a href="about.html">Over mij</a>
-                        <a href="contact.html">Contact</a>
                 </div>
                 <div class="menu-laser-bar">
                         <div class="menu-laser-white"></div>
@@ -42,12 +41,47 @@ setTimeout(() => {
         redLaser.style.opacity = 0;
         redLaser.style.transform = 'scaleX(0)';
     }
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    let activeLink = null;
+
     menu.querySelectorAll('a').forEach(a => {
+        // Check if this link is for the current page
+        const linkHref = a.getAttribute('href');
+        const isActive = linkHref === currentPage || 
+                        (currentPage === '' && linkHref === 'index.html') ||
+                        (currentPage === 'index.html' && linkHref === 'index.html');
+        
+        if (isActive) {
+            activeLink = a;
+            // Style the active link
+            a.style.color = '#d10125';
+            a.classList.add('active');
+        }
+
         a.addEventListener('mouseenter', () => moveLaserTo(a));
-        a.addEventListener('mouseleave', hideLaser);
+        a.addEventListener('mouseleave', () => {
+            if (activeLink) {
+                moveLaserTo(activeLink); // Keep laser on active page
+            } else {
+                hideLaser();
+            }
+        });
         a.addEventListener('focus', () => moveLaserTo(a));
-        a.addEventListener('blur', hideLaser);
+        a.addEventListener('blur', () => {
+            if (activeLink) {
+                moveLaserTo(activeLink); // Keep laser on active page
+            } else {
+                hideLaser();
+            }
+        });
     });
-    hideLaser();
+
+    // Set initial laser position to active page
+    if (activeLink) {
+        moveLaserTo(activeLink);
+    } else {
+        hideLaser();
+    }
 }, 0);
 
