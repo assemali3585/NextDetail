@@ -1,10 +1,17 @@
 // Wait for pakketten to be available and DOM to be ready
 (function() {
-    // Check if pakketten is loaded
-    if (typeof pakketten === 'undefined') {
-        console.error('pakketten array is not loaded yet');
-        return;
-    }
+    function initializePrices() {
+        // Check if pakketten is loaded
+        if (typeof pakketten === 'undefined') {
+            // Wait a bit and try again
+            setTimeout(initializePrices, 50);
+            return;
+        }
+        
+        // Check if we're on the prices page
+        if (!document.getElementById('showSmallPrices')) {
+            return; // Not on prices page, exit gracefully
+        }
 
     // Filter packages by size
     const smallPrices = pakketten.filter(pakket => pakket.size === "Klein");
@@ -69,10 +76,13 @@
             smallPrices.forEach(pakket => {
                 if (pakket.type === 'Interior') {
                     const pakketDiv = document.createElement('div');
-                    pakketDiv.className = 'window';
+                    pakketDiv.className = 'window align-left';
                     pakketDiv.innerHTML = `
                         <h2>${pakket.quality}</h2>
-                        <p>Prijs: €${pakket.price}</p>
+                        <p>Duur: ${pakket.length}</p>
+                        <p class="align-center">${pakket.description}</p>
+                        <ul class="width-100">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     interiorContainer.appendChild(pakketDiv);
                 }
@@ -97,7 +107,10 @@
                     pakketDiv.className = 'window';
                     pakketDiv.innerHTML = `
                         <h2>${pakket.quality}</h2>
-                        <p>Prijs: €${pakket.price}</p>
+                        <p>Duur: ${pakket.length}</p>
+                        <p class="align-center">${pakket.description}</p>
+                        <ul class="width-100 align-left">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     exteriorContainer.appendChild(pakketDiv);
                 }
@@ -153,10 +166,13 @@
             mediumPrices.forEach(pakket => {
                 if (pakket.type === 'Interior') {
                     const pakketDiv = document.createElement('div');
-                    pakketDiv.className = 'window';
+                    pakketDiv.className = 'window align-left';
                     pakketDiv.innerHTML = `
                         <h2>${pakket.quality}</h2>
-                        <p>Prijs: €${pakket.price}</p>
+                        <p>Duur: ${pakket.length}</p>
+                        <p class="align-center">${pakket.description}</p>
+                        <ul class="width-100">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     interiorContainer.appendChild(pakketDiv);
                 }
@@ -178,10 +194,13 @@
             mediumPrices.forEach(pakket => {
                 if (pakket.type === 'Exterior') {
                     const pakketDiv = document.createElement('div');
-                    pakketDiv.className = 'window';
+                    pakketDiv.className = 'window align-left';
                     pakketDiv.innerHTML = `
                         <h2>${pakket.quality}</h2>
-                        <p>Prijs: €${pakket.price}</p>
+                        <p>Duur: ${pakket.length}</p>
+                        <p class="align-center">${pakket.description}</p>
+                        <ul class="width-100">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     exteriorContainer.appendChild(pakketDiv);
                 }
@@ -235,10 +254,13 @@
             largePrices.forEach(pakket => {
                 if (pakket.type === 'Interior') {
                     const pakketDiv = document.createElement('div');
-                    pakketDiv.className = 'window';
+                    pakketDiv.className = 'window align-left';
                     pakketDiv.innerHTML = `
                         <h2>${pakket.quality}</h2>
-                        <p>Prijs: €${pakket.price}</p>
+                        <p>Duur: ${pakket.length}</p>
+                        <p class="align-center">${pakket.description}</p>
+                        <ul class="width-100">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     interiorContainer.appendChild(pakketDiv);
                 }
@@ -260,10 +282,13 @@
             largePrices.forEach(pakket => {
                 if (pakket.type === 'Exterior') {
                     const pakketDiv = document.createElement('div');
-                    pakketDiv.className = 'window';
+                    pakketDiv.className = 'window align-left';
                     pakketDiv.innerHTML = `
                         <h2>${pakket.quality}</h2>
-                        <p>Prijs: €${pakket.price}</p>
+                        <p>Duur: ${pakket.length}</p>
+                        <p class="align-center">${pakket.description}</p>
+                        <ul class="width-100 align-left">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     exteriorContainer.appendChild(pakketDiv);
                 }
@@ -282,4 +307,9 @@
             priceSizeTitle.textContent = 'Kies uw pakket(ten)!';
         });
     }
+    
+    } // Close initializePrices function
+    
+    // Start the initialization process
+    initializePrices();
 })();

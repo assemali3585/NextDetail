@@ -12,6 +12,7 @@
     clear: both;
     flex-shrink: 0;
     font-family: 'Poppins', sans-serif!important;
+    border-top: 4px solid #d10125;
 }
 
 .footer-inner {
@@ -42,7 +43,7 @@
 }
 .contact input {
     padding: 10px;
-    width: 80%;
+    width: 90%;
     background-color: #2D3439;
     border: 1px solid #555555;
 }
@@ -95,4 +96,17 @@
         padding: 0;
         flex: none;
     }
+}
+
+.social-sign {
+    display: flex;
+    background-color: #d10125;
+    color: #fff;
+    justify-content: space-between;
+    padding: 0.4rem 2vw;
+}
+.social-sign div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;   
 }
