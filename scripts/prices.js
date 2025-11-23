@@ -171,7 +171,7 @@
                         <h2>${pakket.quality}</h2>
                         <p>Duur: ${pakket.length}</p>
                         <p class="align-center">${pakket.description}</p>
-                        <ul class="width-100">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <ul class="width-100 align-left">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
                         <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     interiorContainer.appendChild(pakketDiv);
@@ -259,7 +259,7 @@
                         <h2>${pakket.quality}</h2>
                         <p>Duur: ${pakket.length}</p>
                         <p class="align-center">${pakket.description}</p>
-                        <ul class="width-100">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
+                        <ul class="width-100 align-left">${pakket.points.map(point => `<li>${point}</li>`).join('')}</ul>
                         <p class="text-bigger">Prijs: €${pakket.price}</p>
                     `;
                     interiorContainer.appendChild(pakketDiv);
